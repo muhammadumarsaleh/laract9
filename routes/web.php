@@ -22,6 +22,7 @@ Route::get('/news', [NewsController::class, 'show'])->middleware(['auth', 'verif
 Route::get('/news/edit', [NewsController::class, 'edit'])->middleware(['auth', 'verified'])->name('edit.news');
 Route::post('/news/update', [NewsController::class, 'update'])->middleware(['auth', 'verified'])->name('update.news');
 Route::post('/news/delete', [NewsController::class, 'destroy'])->middleware(['auth', 'verified'])->name('delete.news');
+// Route::post('/news/delete', [NewsController::class, 'destroy'])->middleware(['auth', 'verified'])->name('delete.news');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
